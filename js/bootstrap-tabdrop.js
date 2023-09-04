@@ -56,11 +56,11 @@
 		this.options = options;
 
 		if (options.align === "left")
-			this.dropdown = $('<li class="dropdown hide pull-left tabdrop"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"><span class="display-tab"></span><b class="caret"></b></a><ul class="dropdown-menu"></ul></li>');
+			this.dropdown = $('<li class="dropdown hide pull-left tabdrop"><a role="button" id="tabdrop-open-link" class="dropdown-toggle" aria-expanded="false" aria-controls="tabdrop-dropdown" data-toggle="dropdown" href="javascript:;"><span class="display-tab"></span><b class="caret"></b></a><ul class="dropdown-menu" id="tabdrop-dropdown" aria-labelledby="tabdrop-open-link"></ul></li>');
 		else
-			this.dropdown = $('<li class="dropdown hide pull-right tabdrop"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"><span class="display-tab"></span><b class="caret"></b></a><ul class="dropdown-menu"></ul></li>');
+			this.dropdown = $('<li class="dropdown hide pull-right tabdrop"><a role="button" id="tabdrop-open-link" class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false" aria-controls="tabdrop-dropdown"><span class="display-tab"></span><b class="caret"></b></a><ul class="dropdown-menu" id="tabdrop-dropdown" aria-labelledby="tabdrop-open-link"></ul></li>');
 
-		this.dropdown.prependTo(this.element);
+		this.dropdown.appendTo(this.element);
 		if (this.element.parent().is('.tabs-below')) {
 			this.dropdown.addClass('dropup');
 		}
