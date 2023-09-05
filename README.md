@@ -1,5 +1,10 @@
-bootstrap-tabdrop
-=================
+# bootstrap-tabdrop
+
+This is a fork of [bootstrap-tabdrop](https://github.com/jmschabdach/bootstrap-tabdrop)
+
+This fork fixes accessibility isseues with the bootstra-tabdrop.
+
+## What is bootstrap tabdrop
 
 A dropdown tab tool for @twitter bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by @jschab and @josephdburdick
 
